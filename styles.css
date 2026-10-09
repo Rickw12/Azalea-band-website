@@ -1,0 +1,317 @@
+:root {
+    --bg-dark: #07050a;
+    --bg-surface: #0f0a17;
+    --bg-elevated: #160f22;
+    --azalea-purple: #7E4AB8;
+    --azalea-light: #a778e3;
+    --text-main: #d6d3d1;
+    --text-muted: #8c8594;
+    --border-subtle: rgba(126, 74, 184, 0.25);
+    --border-focus: rgba(126, 74, 184, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Syne', sans-serif;
+}
+
+/* Film grain overlay zonder externe assets */
+.film-grain {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    animation: grainJitter 0.35s steps(4) infinite;
+}
+
+@keyframes grainJitter {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(3px, -1px); }
+    75% { transform: translate(-2px, -3px); }
+    100% { transform: translate(1px, 2px); }
+}
+
+/* Typografie & utilities */
+.font-gothic { font-family: 'UnifrakturMaguntia', serif; }
+.font-cinzel { font-family: 'Cinzel', serif; letter-spacing: 0.08em; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* Layout componenten */
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background-color: rgba(7, 5, 10, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.nav-links a:hover {
+    color: var(--azalea-purple);
+}
+
+section {
+    padding: 6rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-title {
+    font-size: 2.25rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.section-tag {
+    font-size: 0.75rem;
+    color: var(--azalea-purple);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Hero */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-title {
+    font-size: clamp(4.5rem, 14vw, 9.5rem);
+    color: #f5f5f4;
+    line-height: 0.95;
+    text-shadow: 0 0 35px rgba(126, 74, 184, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 1.5rem;
+}
+
+/* Markup: Muziek lijst */
+.music-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.release-box {
+    border: 1px solid var(--border-subtle);
+    background-color: var(--bg-surface);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.release-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.release-header h3 {
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.track-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.track-row:last-child {
+    border-bottom: none;
+}
+
+/* Markup: Tour tabel */
+.tour-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+.tour-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    color: var(--azalea-purple);
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.tour-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tour-table tr:hover td {
+    background-color: var(--bg-surface);
+}
+
+.ticket-link {
+    color: var(--azalea-purple);
+    border: 1px solid var(--border-subtle);
+    padding: 0.35rem 0.75rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.ticket-link:hover {
+    background-color: var(--azalea-purple);
+    color: #fff;
+}
+
+/* Formulieren & EPK */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid-2 {
+    grid-template-columns: 1fr 1fr;
+    }
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    color: #fff;
+    padding: 0.75rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    border-radius: 3px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--azalea-purple);
+}
+
+.btn-submit {
+    background-color: var(--azalea-purple);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: var(--azalea-light);
+}
+
+.rider-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.rider-card ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.rider-card li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+#logo-banner {
+    height: 80px;
+}
+
+#logo-body {
+    height: 500px;
+}

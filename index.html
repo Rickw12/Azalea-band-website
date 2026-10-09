@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azalea | Sludge &amp; Doom</title>
+  
+  <!-- Typografie: UnifrakturMaguntia (Doom/Gothic), Cinzel & Syne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Syne:wght@400;600&family=UnifrakturMaguntia&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Geanimeerde Grain Overlay (Pure CSS/SVG Data URI) -->
+  <div class="film-grain"></div>
+
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="font-gothic" style="font-size: 2rem; color: #fff;">        
+        <img src="images\AzaleaTextBlackWithPurpleBorder.png" alt="Logo" id="logo-banner">
+      </a>
+      <nav class="nav-links font-mono">
+        <a href="#muziek">Music</a>
+        <a href="#tour">Tour</a>
+        <a href="#over">About</a>
+        <a href="#contact">Contact</a>
+        <!-- <a href="#rider">Rider</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <!-- <h1 class="hero-title font-gothic">Azalea</h1> -->
+        <img src="images\AzaleaTextBlackWithPurpleBorder.png" alt="Logo" id="logo-body">
+        <p class="hero-subtitle font-cinzel">Sludge &bull; Doom Metal</p>
+      </div>
+    </section>
+
+    <!-- MUZIEK / RELEASES -->
+    <section id="muziek">
+      <div class="container">
+
+        <span class="section-tag font-mono">Discography</span>
+        <h2 class="section-title font-cinzel">Music</h2>
+        
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/0kKaTsmBnzw7orHhPOg2nT?utm_source=generator&theme=0&si=a61c5b6fee55493f" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <!-- <div class="music-list">
+          //Album / EP Container (Klaar om direct te vullen met jullie release)
+          <article class="release-box">
+            <header class="release-header">
+              <div>
+                <h3 class="font-cinzel">[Titel van Album / EP]</h3>
+                <span class="font-mono" style="font-size: 0.75rem; color: var(--text-muted);">Jaar / Formaat (bijv. 2026 &bull; Vinyl &amp; Digital)</span>
+              </div>
+              <a href="#" class="ticket-link font-mono" target="_blank" rel="noopener">Bandcamp / Luister &rarr;</a>
+            </header>
+
+            //Semantische tracklijst
+            <div class="font-mono">
+              <div class="track-row">
+                <span>01. [Tracknaam 1]</span>
+                <span style="color: var(--text-muted);">00:00</span>
+              </div>
+              <div class="track-row">
+                <span>02. [Tracknaam 2]</span>
+                <span style="color: var(--text-muted);">00:00</span>
+              </div>
+              <div class="track-row">
+                <span>03. [Tracknaam 3]</span>
+                <span style="color: var(--text-muted);">00:00</span>
+              </div>
+            </div>
+          </article>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- TOUR & RITUELEN -->
+    <section id="tour">
+      <div class="container">
+        <span class="section-tag font-mono">Live Data</span>
+        <h2 class="section-title font-cinzel">Tour &amp; Rituals</h2>
+
+        <!-- <table class="tour-table font-mono">
+          <thead>
+            <tr>
+              <th>Datum</th>
+              <th>Locatie / Zaal</th>
+              <th>Stad</th>
+              <th style="text-align: right;">Tickets / Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            // Rij placeholder: kopieer voor elke nieuwe show
+            <tr>
+              <td>[DD MMM JJJJ]</td>
+              <td>[Naam Zaal / Festival]</td>
+              <td>[Stad, Land]</td>
+              <td style="text-align: right;">
+                <a href="#" class="ticket-link" target="_blank" rel="noopener">Info</a>
+              </td>
+            </tr>
+          </tbody>
+        </table> -->
+
+        <!-- #region bandsintownWidget-->
+          <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+            <a class="bit-widget-initializer"
+              data-artist-name="id_15620983"
+              
+              data-background-color="rgba(121,0,0,0)"
+              data-separator-color="rgba(221,221,221,1)"
+              data-text-color="rgba(66,66,66,1)"
+              data-font="Luminari"
+              data-auto-style="true"
+              
+              data-button-label-capitalization="capitalize"
+              data-header-capitalization="uppercase"
+              data-location-capitalization="capitalize"
+              data-venue-capitalization="capitalize"
+              data-local-dates-position="tab"
+              data-display-lineup="false"
+              data-display-start-time="false"
+              data-social-share-icon="false"
+              data-display-limit="all"
+              
+              data-date-format="MMM. D, YYYY"
+              data-date-orientation="horizontal"
+              data-date-border-color="#4A4A4A"
+              data-date-border-width="1px"
+              data-date-capitalization="capitalize"
+              data-date-border-radius="10px"
+              
+              data-event-ticket-cta-size="medium"
+              data-event-ticket-text="TICKETS"
+              data-event-ticket-icon="false"
+              data-event-ticket-cta-text-color="rgba(255,255,255,1)"
+              data-event-ticket-cta-bg-color="rgba(126,74,184,1)"
+              data-event-ticket-cta-border-color="rgba(126,74,184,1)"
+              data-event-ticket-cta-border-width="0px"
+              data-event-ticket-cta-border-radius="2px"
+              
+              data-sold-out-button-text-color="rgba(255,255,255,1)"
+              data-sold-out-button-background-color="rgba(74,74,74,1)"
+              data-sold-out-button-border-color="rgba(74,74,74,1)"
+              data-sold-out-button-clickable="true"
+              
+              data-event-rsvp-position="left"
+              data-event-rsvp-cta-size="medium"
+              data-event-rsvp-only-show-icon="false"
+              data-event-rsvp-text="RSVP"
+              data-event-rsvp-icon="false"
+              data-event-rsvp-cta-text-color="rgba(74,74,74,1)"
+              data-event-rsvp-cta-bg-color="rgba(126,74,184,1)"
+              data-event-rsvp-cta-border-color="rgba(74,74,74,1)"
+              data-event-rsvp-cta-border-width="1px"
+              data-event-rsvp-cta-border-radius="2px"
+              
+              data-follow-section-position="top"
+              data-follow-section-alignment="center"
+              data-follow-section-header-text="Get updates on new shows, new music, and more"
+              data-follow-section-cta-size="medium"
+              data-follow-section-cta-text="FOLLOW"
+              data-follow-section-cta-icon="false"
+              data-follow-section-cta-text-color="rgba(255,255,255,1)"
+              data-follow-section-cta-bg-color="rgba(126,74,184,1)"
+              data-follow-section-cta-border-color="rgba(74,74,74,1)"
+              data-follow-section-cta-border-width="0px"
+              data-follow-section-cta-border-radius="2px"
+              
+              data-play-my-city-position="bottom"
+              data-play-my-city-alignment="center"
+              data-play-my-city-header-text="Don't see a show near you?"
+              data-play-my-city-cta-size="medium"
+              data-play-my-city-cta-text="REQUEST A SHOW"
+              data-play-my-city-cta-icon="false"
+              data-play-my-city-cta-text-color="rgba(255,255,255,1)"
+              data-play-my-city-cta-bg-color="rgba(126,74,184,1)"
+              data-play-my-city-cta-border-color="rgba(74,74,74,1)"
+              data-play-my-city-cta-border-width="0px"
+              data-play-my-city-cta-border-radius="2px"
+              
+              data-language="en"
+              data-layout-breakpoint="900"
+              data-app-id="d1e17d46e41386266c8e45680f3ad95c"
+              data-bit-logo-position="hidden"
+              data-bit-logo-color="rgba(66,66,66,1)">
+            </a>
+        <!-- #endregion -->
+
+      </div>
+    </section>
+
+    <!-- OVER DE BAND -->
+    <section id="over">
+      <div class="container">
+        <span class="section-tag font-mono">Biography</span>
+        <h2 class="section-title font-cinzel">About Azalea</h2>
+
+        <div style="max-width: 680px; line-height: 1.8; margin-top: 1.5rem; font-size: 0.95rem; color: #b5b0be;">
+          <p style="margin-bottom: 1.25rem;">
+            Azalea is a sludge metal band that fuses crushing, slow-burning riffs with a deeper, mysterious view of the good in the world. 
+            Their lyrics take you to another dimension, where light and darkness converge and the familiar takes on a strange, new shape. 
+            With raw vocals, heavy grooves, and an atmospheric undertone, Azalea challenges listeners to experience reality from a different perspective. 
+            Brutality and reflection go hand in hand-a sonic storm that both devastates and enlightens.
+          </p>
+        </div>
+
+        <!-- Bezetting -->
+        <div class="rider-card font-mono" style="margin-top: 2rem; max-width: 480px;">
+          <div style="font-size: 0.8rem; color: var(--azalea-purple); text-transform: uppercase;">Line-up</div>
+          <ul>
+            <li><span>Vocals / Bass</span><span style="color: var(--text-muted);">Jari</span></li>
+            <li><span>Guitar / B. Vocals</span><span style="color: var(--text-muted);">Koen</span></li>
+            <li><span>Drums</span><span style="color: var(--text-muted);">Rick</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & EPK RIDER -->
+    <section id="contact">
+      <div class="container">
+        <div class="grid-1">
+          <!-- Boekingen / Contact Formulier -->
+          <div>
+            <span class="section-tag font-mono">Bookings</span>
+            <h2 class="section-title font-cinzel">Contact</h2>
+            <form action="mailto:azaleadoom@gmail.com" method="POST" enctype="text/plain" style="margin-top: 1.5rem;">
+              <!-- <div class="form-group">
+                <label for="naam" class="font-mono">Name / Organisatie</label>
+                <input type="text" id="naam" name="naam" required>
+              </div> -->
+              <div class="form-group">
+                <label for="email" class="font-mono">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="bericht" class="font-mono">Message</label>
+                <textarea id="bericht" name="bericht" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn-submit">Send</button>
+            </form>
+          </div>
+
+          <!-- Technische Rider Skeleton -->
+          <!-- <div id="rider">
+            <span class="section-tag font-mono">Voor Zaaltechnici</span>
+            <h2 class="section-title font-cinzel">Technische Rider</h2>
+            <div class="rider-card font-mono" style="margin-top: 1.5rem;">
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">
+                Basisspecificaties voor optredens.
+              </p>
+              <ul>
+                <li><span>Priklijst</span><span>[Aantal kanalen, bijv. 12]</span></li>
+                <li><span>Stemming</span><span>Drop-A (Voldoende sublaag PA vereist)</span></li>
+                <li><span>Monitoring</span><span>Minimaal 4 groepen</span></li>
+                <li><span>Stroom</span><span>Vrije 16A groepen op het podium</span></li>
+              </ul>
+              <div style="margin-top: 1.25rem;">
+                <a href="#" class="ticket-link" style="display: inline-block; width: 100%; text-align: center;">Download Volledige PDF Rider</a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container font-mono">
+      <p>&copy; Azalea &bull; Sludge / Doom Metal</p>
+    </div>
+  </footer>
+</body>
+</html>
