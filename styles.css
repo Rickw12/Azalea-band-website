@@ -327,6 +327,19 @@ footer {
     display: block;
 }
 
+.socials a {
+    margin: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform .2s, filter .2s;
+}
+
+.socials a:hover { transform: translateY(-3px) scale(1.08); filter: brightness(1.1); }
+
 @media (max-width: 400px) {
     #banner-text {
         display: block !important;
